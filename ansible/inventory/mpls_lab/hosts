@@ -1,0 +1,16 @@
+#localhost ansible_connection=local ansible_user=ansible
+
+[xrv]
+cisco-1
+cisco-2
+
+[xrv:vars]
+lab_id=mpls_lab
+ansible_connection=network_cli
+ansible_network_os=iosxr
+ansible_become=yes
+ansible_become_method=enable
+ansible_user=vrnetlab
+ansible_ssh_pass=VR-netlab9
+#ansible_connection=local
+###ansible_user=ansible

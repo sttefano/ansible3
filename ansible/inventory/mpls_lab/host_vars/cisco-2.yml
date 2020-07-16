@@ -1,0 +1,21 @@
+---
+layer3_interfaces:
+ - { interface: 'GigabitEthernet0/0/0/0', ip_address: '10.0.10.9/30' }
+ - { interface: 'GigabitEthernet0/0/0/1', ip_address: '10.0.10.5/30' }
+ 
+route_reflector:
+ as: "65000"
+ router_id: "10.0.10.9"
+ neighbours:
+  - { peer_ip: '10.0.10.10', remote_as: '65000' }
+  - { peer_ip: '10.0.10.6', remote_as: '65000' }
+
+
+
+     #bgp:
+     ##as: "65000"
+     ##router_id: "10.0.10.9"
+     ##neighbours:
+     ###- { peer_ip: '10.0.10.10', remote_as: '65000' }
+     ###- { peer_ip: '10.0.10.6', remote_as: '65000' }
+

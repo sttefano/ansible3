@@ -1,0 +1,15 @@
+{% set common = "snippets/common/cisco" %}
+{% set lab_snippets = "snippets/"+lab_id+"/cisco" %}
+!
+{% include common+'/iosxr_hostname.j2' %}
+!
+{% include common+'/iosxr_lldp_run.j2' %}
+!
+{% include lab_snippets+'/iosxr_layer3_interfaces.j2' %}
+!
+{% include lab_snippets+'/iosxr_port_channel_members.j2' %}
+!
+{% include lab_snippets+'/iosxr_bgp.j2' %}
+!
+{% include lab_snippets+'/iosxr_route_reflector.j2' %}
+!

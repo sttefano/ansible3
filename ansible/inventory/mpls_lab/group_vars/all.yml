@@ -1,0 +1,11 @@
+---
+output_dir: "output/{{ lab_id }}"
+
+xcon:
+ links:
+  - cisco-1
+  - cisco-2
+
+ p2p:
+  - { a_device: 'cisco-1', a_port: '1', b_device: 'cisco-2', b_port: '1' }
+  
